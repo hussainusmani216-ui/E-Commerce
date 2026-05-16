@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modern Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons Link -->
+   <!-- Is sahi link ko copy karke wahan paste karein -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader Section Start -->
+<div id="preloader">
+    <div class="preloader-content text-center">
+        <!-- Aap apna logo yahan lagayein -->
+        <h1 class="fw-bold text-white mb-3">MY <span class="text-info">BRAND</span></h1>
+        <!-- Bootstrap Spinner -->
+        <div class="spinner-border text-info" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>
+<!-- Preloader Section End -->
+  <!----------------------------------xx------------------------------xx-----------------------------xx----------------->
+       
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Store</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="myNavbar">
+            </div>
+    </div>
+</nav>
+    <!-- navbar -->
+       <nav class="navbar navbar-expand-lg navbar-dark custom-nav fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="#">MY <span class="text-info">BRAND</span></a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <!-- Nav Links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="#product-sale">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Sale">Sale</a></li>
+            </ul>
+            <form class="d-flex mx-auto search-wrapper" role="search" onsubmit="executeSearch(event)">
+    <input id="mainSearchInput" class="form-control search-input" type="search" placeholder="Search products..." aria-label="Search"/>
+    <button class="btn btn-search" type="submit"><i class="bi bi-search"></i></button>
+</form>
+
+            <!-- Right Side: Cart & Auth -->
+            <div class="d-flex align-items-center nav-right-auth">
+                <a href="#" class="cart-icon me-3"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="login.html" target="_blank"><button class="btn btn-login me-2" type="button">Login</button></a>
+                <a href="signup.html" target="_blank"><button class="btn btn-signup shadow-sm" type="button">Sign Up</button></a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+  <!----------------------------------xx------------------------------xx-----------------------------xx----------------->
+
+<div id="heroSlider" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <!-- Indicators (Dots) ko center mein rakhne ke liye base class kafi hai -->
+  <div class="carousel-indicators custom-dots">
+    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <!-- Slide 1 -->
+    <div class="carousel-item active" data-bs-interval="3000">
+      <img src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=1600&q=80" class="d-block w-100" alt="Next-Gen Electronics" style="height: 550px; object-fit: cover;">
+      <!-- Classes added: d-flex flex-column justify-content-center align-items-center h-100 text-center -->
+      <div class="carousel-caption custom-cap d-flex flex-column justify-content-center align-items-center h-100 text-center">
+        <h2 class="display-5 fw-bold">Next-Gen Electronics</h2>
+        <p>Up to 40% OFF on premium smart devices.</p>
+        <a href="#product-sale" class="btn btn-info px-4 py-2 fw-bold">Shop Now</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item" data-bs-interval="3000">
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&q=80" class="d-block w-100" alt="Trending Fashion" style="height: 550px; object-fit: cover;">
+      <div class="carousel-caption custom-cap d-flex flex-column justify-content-center align-items-center h-100 text-center">
+        <h2 class="display-5 fw-bold">Trending Fashion</h2>
+        <p>Explore the latest apparel designs that redefine style.</p>
+        <a href="#product-sale" class="btn btn-info px-4 py-2 fw-bold">Explore Styles</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item" data-bs-interval="3000">
+      <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=1600&q=80" class="d-block w-100" alt="Step In Style" style="height: 550px; object-fit: cover;">
+      <div class="carousel-caption custom-cap d-flex flex-column justify-content-center align-items-center h-100 text-center">
+        <h2 class="display-5 fw-bold">Step In Style</h2>
+        <p>Discover ultimate comfort with premium footwear.</p>
+        <a href="#product-sale" class="btn btn-info px-4 py-2 fw-bold">View Collection</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left aur Right arrow buttons jo side ke beech mein hote hain -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+  <!----------------------------------xx------------------------------xx-----------------------------xx----------------->
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="sleek-card">
+        </div>
+</div>
+
+<section class="stripe-category-section">
+    <div class="container">
+        <h2 class="text-white fw-bold mb-5">Shop by <span class="text-info">Categories</span></h2>
+        
+        <div class="stripe-grid">
+            <div class="stripe-card" style="--bg-img: url('https://images.unsplash.com/photo-1498049794561-7780e7231661?w=500&q=80')">
+                <div class="stripe-overlay" ></div>
+                <div class="stripe-content">
+                    <h5>Electronics</h5>
+                    <p>Smart devices & gadgets</p>
+                </div>
+            </div>
+
+            <div class="stripe-card" style="--bg-img: url('https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=500&q=60')">
+                <div class="stripe-overlay"></div>
+                <div class="stripe-content">
+                    <h5>Fashion</h5>
+                    <p>Latest trending apparel</p>
+                </div>
+            </div>
+
+            <div class="stripe-card" style="--bg-img: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80')">
+                <div class="stripe-overlay"></div>
+                <div class="stripe-content">
+                    <h5>Footwear</h5>
+                    <p>Step in style and comfort</p>
+                </div>
+            </div>
+
+            <div class="stripe-card" style="--bg-img: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80')">
+                <div class="stripe-overlay"></div>
+                <div class="stripe-content">
+                    <h5>Accessories</h5>
+                    <p>Luxury watches & more</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!----------------------------------xx------------------------------xx-----------------------------xx----------------->
+
+<section id="product-sale" class="products-section py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-end mb-5">
+            <div>
+                <h2 class="fw-bold mb-0">Featured <span class="text-primary">Products</span></h2>
+                <p class="text-muted mb-0">Explore our top-rated arrivals</p>
+            </div>
+            <button class="btn btn-outline-dark rounded-pill px-4 fw-bold shadow-sm">View All</button>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="sleek-card shadow-sm border-0 h-100">
+                    <div class="card-img-wrapper">
+                        <span class="badge-hot">Limited</span>
+                        <img src="product.jpg/ales-nesetril-Im7lZjxeLhg-unsplash_optimized_200.jpg" class="product-img" alt="Laptop">
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <p class="text-uppercase text-muted x-small mb-1">High Performance</p>
+                        <h5 class="fw-bold product-title mb-2">UltraBook Pro X</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="new-price fw-bold text-dark fs-5">$1,999</div>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="sleek-card shadow-sm border-0 h-100">
+                    <div class="card-img-wrapper">
+                        <img src="product.jpg/ali-bakhtiari-7ic3yF64FS8-unsplash_optimized_200.jpg" class="product-img" alt="Headphones">
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <p class="text-uppercase text-muted x-small mb-1">Premium Audio</p>
+                        <h5 class="fw-bold product-title mb-2">Sony XM5 Headset</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="new-price fw-bold text-dark fs-5">$349</div>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="sleek-card shadow-sm border-0 h-100">
+                    <div class="card-img-wrapper">
+                        <span class="badge-hot">LIMITED</span>
+                        <img src="product.jpg/c-d-x-PDX_a_82obo-unsplash_optimized_200.jpg" class="product-img" alt="Watch">
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <p class="text-uppercase text-muted x-small mb-1">Accessories</p>
+                        <h5 class="fw-bold product-title mb-2">Smart Watch S3</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="new-price fw-bold text-dark fs-5">$199</div>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="sleek-card shadow-sm border-0 h-100">
+                    <div class="card-img-wrapper">
+                        <img src="product.jpg/caio-coelho-QRN47la37gw-unsplash_1_optimized_200.jpg" class="product-img" alt="Shoes">
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <p class="text-uppercase text-muted x-small mb-1">Footwear</p>
+                        <h5 class="fw-bold product-title mb-2">Nike Air Max</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="new-price fw-bold text-dark fs-5">$150</div>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3 mt-4">
+                <div class="sleek-card shadow-sm border-0 h-100">
+                    <div class="card-img-wrapper">
+                        <img src="product.jpg/caroline-attwood-E1rH__X9SA0-unsplash_optimized_200.jpg" class="product-img" alt="Camera">
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <p class="text-uppercase text-muted x-small mb-1">Photography</p>
+                        <h5 class="fw-bold product-title mb-2">Polaroid OneStep</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="new-price fw-bold text-dark fs-5">$120</div>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3 mt-4">
+                <div class="sleek-card shadow-sm border-0 h-100">
+                    <div class="card-img-wrapper">
+                        <span class="badge-hot" style="background:#2ecc71;">NEW</span>
+                        <img src="product.jpg/conor-luddy-IVaKksEZmZA-unsplash_optimized_200.jpg" class="product-img" alt="Ipad">
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <p class="text-uppercase text-muted x-small mb-1">Perfume</p>
+                        <h5 class="fw-bold product-title mb-2">M Perfume</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="new-price fw-bold text-dark fs-5">$599</div>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3 mt-4">
+                <div class="sleek-card shadow-sm border-0 h-100">
+                    <div class="card-img-wrapper">
+                        <img src="product.jpg/daniel-korpai-hbTKIbuMmBI-unsplash_optimized_200.jpg" class="product-img" alt="Speaker">
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <p class="text-uppercase text-muted x-small mb-1">Audio</p>
+                        <h5 class="fw-bold product-title mb-2">JBL Flip 6</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="new-price fw-bold text-dark fs-5">$99</div>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3 mt-4">
+                <div class="sleek-card shadow-sm border-0 h-100">
+                    <div class="card-img-wrapper">
+                        <img src="product.jpg/irene-kredenets-dwKiHoqqxk8-unsplash_optimized_200.jpg" class="product-img" alt="Mouse">
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <p class="text-uppercase text-muted x-small mb-1">Computing</p>
+                        <h5 class="fw-bold product-title mb-2">Razer Gaming Mouse</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="new-price fw-bold text-dark fs-5">$75</div>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!----------------------------------xx------------------------------xx-----------------------------xx----------------->
+<section id="Sale" class="products-section py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-end mb-5">
+            <div>
+                <h2 class="card-title mb-0">Sale <span class="text-primary">Products</span></h2>
+                <p class="text-muted mb-0">Explore our top-rated arrivals</p>
+            </div>
+            <button class="btn btn-outline-dark rounded-pill px-4 fw-bold shadow-sm">View All</button>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="sleek-card shadow-sm border-0 h-100">
+                    <div class="card-img-wrapper">
+                        <span class="badge-hot">Hot sale</span>
+                        <img src="product.jpg/jeroen-den-otter-2b0JeJTEclQ-unsplash_optimized_200.jpg" class="product-img" alt="Laptop">
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <p class="text-uppercase text-muted x-small mb-1">High Performance</p>
+                        <h5 class="fw-bold product-title mb-2">UltraBook Pro X</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="new-price fw-bold text-dark fs-5">$1,999</div>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="sleek-card shadow-sm border-0 h-100">
+                    <div class="card-img-wrapper">
+                        <img src="product.jpg/andras-vas-Bd7gNnWJBkU-unsplash_optimized_200.jpg" class="product-img" alt="Headphones">
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <p class="text-uppercase text-muted x-small mb-1">Premium Audio</p>
+                        <h5 class="fw-bold product-title mb-2">Sony XM5 Headset</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="new-price fw-bold text-dark fs-5">$349</div>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="sleek-card shadow-sm border-0 h-100">
+                    <div class="card-img-wrapper">
+                        
+                        <img src="product.jpg/caio-coelho-xFmXLq_KJxg-unsplash_optimized_200.jpg" class="product-img" alt="Watch">
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <p class="text-uppercase text-muted x-small mb-1">Accessories</p>
+                        <h5 class="fw-bold product-title mb-2">Smart Watch S3</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="new-price fw-bold text-dark fs-5">$199</div>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="sleek-card shadow-sm border-0 h-100">
+                    <div class="card-img-wrapper">
+                        <span class="badge-hot">Hot sale</span>
+
+                        <img src="product.jpg/john-torcasio-TJrkkhdB39E-unsplash_optimized_250.jpg" class="product-img" alt="Shoes">
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <p class="text-uppercase text-muted x-small mb-1">Footwear</p>
+                        <h5 class="fw-bold product-title mb-2">Nike Air Max</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="new-price fw-bold text-dark fs-5">$150</div>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3 mt-4">
+                <div class="sleek-card shadow-sm border-0 h-100">
+                    <div class="card-img-wrapper">
+                        <img src="product.jpg/wiser-by-the-mile-3o-X8WJOP5E-unsplash_optimized_250.jpg" class="product-img" alt="Camera">
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <p class="text-uppercase text-muted x-small mb-1">Photography</p>
+                        <h5 class="fw-bold product-title mb-2">Polaroid OneStep</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="new-price fw-bold text-dark fs-5">$120</div>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3 mt-4">
+                <div class="sleek-card shadow-sm border-0 h-100">
+                    <div class="card-img-wrapper">
+                        <span class="badge-hot" style="background:#2ecc71;">50% Sale</span>
+                        <img src="product.jpg/laura-chouette-gbT2KAq1V5c-unsplash_optimized_250.jpg" class="product-img" alt="Ipad">
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <p class="text-uppercase text-muted x-small mb-1">Perfume</p>
+                        <h5 class="fw-bold product-title mb-2">M Perfume</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="new-price fw-bold text-dark fs-5">$599</div>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3 mt-4">
+                <div class="sleek-card shadow-sm border-0 h-100">
+                    <div class="card-img-wrapper">
+                        <img src="product.jpg/oscar-ivan-esquivel-arteaga-ZtxED1cpB1E-unsplash_optimized_250.jpg" class="product-img" alt="Speaker">
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <p class="text-uppercase text-muted x-small mb-1">Audio</p>
+                        <h5 class="fw-bold product-title mb-2">JBL Flip 6</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="new-price fw-bold text-dark fs-5">$99</div>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3 mt-4">
+                <div class="sleek-card shadow-sm border-0 h-100">
+                    <div class="card-img-wrapper">
+                        <img src="product.jpg/rachit-tank-2cFZ_FB08UM-unsplash_optimized.jpg" class="product-img" alt="Mouse">
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <p class="text-uppercase text-muted x-small mb-1">Computing</p>
+                        <h5 class="fw-bold product-title mb-2">Razer Gaming Mouse</h5>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="new-price fw-bold text-dark fs-5">$75</div>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="simple-footer">
+  <div class="container text-center">
+    <div class="footer-icons mb-2">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    <p class="mb-0">© 2026 <b>MY BRAND</b> | Excellence in product</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

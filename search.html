@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body>
+
+<div class="container py-5">
+    <h2 class="fw-bold mb-4">Results for: <span id="searchTerm" class="text-primary"></span></h2>
+    <div class="row g-4" id="resultsGrid"></div>
+</div>
+
+<script>
+    // 1. Data with WORKING online image links
+    const allProducts = [
+        { name: "Smart Watch S3", price: "$199", img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" },
+        { name: "UltraBook Pro X", price: "$1,999", img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500" },
+        { name: "Nike Air Max", price: "$150", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" },
+        { name: "Sony XM5 Headset", price: "$349", img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" }
+    ];
+
+    // 2. Search Logic
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get('query') || "";
+    document.getElementById('searchTerm').innerText = `"${query}"`;
+
+    const filtered = allProducts.filter(p => p.name.toLowerCase().includes(query.toLowerCase()));
+    const grid = document.getElementById('resultsGrid');
+
+    // Results dikhane ka tarika (Make sure row class is outside)
+if(filtered.length > 0) {
+    filtered.forEach(p => {
+        grid.innerHTML += `
+            <div style="width: 250px; margin: 15px; float: left;"> <div class="sleek-card shadow-sm" style="background: #fff; border-radius: 20px; border: 1px solid #eee; overflow: hidden; height: 100%;">
+                    
+                    <div style="background: #f8f9fa; height: 180px; display: flex; justify-content: center; align-items: center; padding: 15px;">
+                        <img src="${p.img}" style="max-height: 140px; max-width: 100%; object-fit: contain;">
+                    </div>
+
+                    <div style="padding: 15px;">
+                        <h6 style="font-weight: bold; font-size: 0.9rem; margin-bottom: 10px; height: 40px; overflow: hidden;">
+                            ${p.name}
+                        </h6>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: bold; color: #333;">${p.price}</span>
+                            <button style="background: #1e1e27; color: white; border: none; padding: 5px 15px; border-radius: 8px; font-size: 12px;">
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+    });
+}
+</script>
+
+</body>
+</html>

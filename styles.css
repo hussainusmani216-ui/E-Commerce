@@ -1,0 +1,71 @@
+/* Sirf Mobile Screens ke liye (Max-width: 576px) */
+@media (max-width: 576px) {
+    /* Main headings ko chota karein */
+    h2 {
+        font-size: 1.6rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* Product card ka title aur text chota karein */
+    .sleek-card h6, .sleek-card h5 {
+        font-size: 0.85rem !important;
+        height: 36px !important; /* Title max 2 lines mein aaye */
+        overflow: hidden;
+    }
+    
+    /* Sections ki padding kam karein taaki white-space zyada na ho */
+    .py-5 {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+}
+@media (max-width: 576px) {
+    .card-img-wrapper {
+        height: 130px !important; /* Mobile par image box chota */
+        padding: 10px !important;
+    }
+    
+    .product-img {
+        max-height: 100px !important; /* Asli image 100px se bari na ho */
+    }
+    
+    /* Add button ko mobile par compact karein */
+    .sleek-card button {
+        padding: 4px 10px !important;
+        font-size: 11px !important;
+    }
+}
+
+    /* Preloader styling */
+    #preloader {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background-color: #11141a !important; /* Dark background */
+        z-index: 9999999 !important; /* Sabse upar rahega */
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        
+        /* 3 second tak loader rukega, phir 0.5 second mein smooth gayab hoga */
+        animation: fadeOutLoader 0.5s ease-in-out 3s forwards !important;
+    }
+
+    .preloader-content {
+        text-align: center;
+    }
+
+    /* Animation jo loader ko chupayegi */
+    @keyframes fadeOutLoader {
+        0% {
+            opacity: 1;
+            visibility: visible;
+        }
+        100% {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+    }

@@ -1,0 +1,431 @@
+
+        body { padding-top: 70px; }
+        
+      
+@import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+  
+body {
+  background: #d0dbe1;
+  padding: 2rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body { 
+    padding-top: 80px; 
+    background-color: #f8fafc; /* Professional Light Background */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Modern Navbar --- */
+.custom-nav {
+    background: rgba(15, 23, 42, 0.9) !important; /* Deep Navy */
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 15px 0;
+}
+
+/* Search Bar Styling */
+.search-wrapper {
+    position: relative;
+    width: 350px;
+}
+.search-input {
+    border-radius: 50px;
+    padding-left: 20px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: white !important;
+}
+.search-input::placeholder { color: #cbd5e1; }
+.search-input:focus {
+    background: rgba(255,255,255,0.2);
+    box-shadow: none;
+    border: 1px solid #3b82f6;
+}
+.btn-search {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #3b82f6;
+    border: none;
+}
+
+/* Auth Buttons */
+.cart-icon {
+    color: #cbd5e1;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+.cart-icon:hover { color: #3b82f6; }
+
+.btn-login {
+    color: #3b82f6;
+    font-weight: 600;
+    border: 1px solid #3b82f6;
+    border-radius: 50px;
+    padding: 6px 20px;
+    transition: 0.3s;
+}
+.btn-login:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+.btn-signup {
+    background: #3b82f6;
+    color: white;
+    border-radius: 50px;
+    padding: 7px 22px;
+    font-weight: 600;
+    border: none;
+}
+.btn-signup:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* Carousel Adjustments */
+.carousel-item { height: 450px;  overflow: hidden; }
+/* Gap Fixing: Navbar aur Carousel ko jodne ke liye */
+body { 
+    padding-top: 0 !important; /* Default padding hatao */
+}
+/* Slider Container Fix */
+#heroSlider {
+    width: 100%;
+    max-width: 1300px; /* Slider ki maximum width limit */
+    margin: 40px auto; /* Center alignment aur top/bottom gap */
+    overflow: hidden;
+    height: 450px;
+}
+
+/* Slide Height & Width Fix */
+.carousel-inner {
+    height: 100%;
+    display: flex;
+}
+
+.carousel-item {
+    height: 450px;
+    width: 100% !important; /* Width hamesha 100% honi chahiye */
+    margin-top: 50px !important;   /* Extra margin hatao warna slide jump karegi */
+    
+
+  }
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.7); /* Text ko behtar dikhane ke liye */
+}
+
+/* Tiny Minimalist Dots */
+.custom-dots {
+    bottom: 20px;
+    gap: 8px;
+}
+
+.custom-dots button {
+    width: 6px !important;    /* Tiny size */
+    height: 6px !important;
+    border-radius: 50% !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.custom-dots button.active {
+    background-color: #ffffff !important;
+    transform: scale(1.5); /* Active wala halka bada dikhega */
+}
+
+/* Button Styling */
+.btn-slider {
+    background: #3b82f6;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    display: inline-block;
+    margin-top: 0px;
+    border: none;
+    margin-bottom: 60px;
+}
+
+.btn-slider:hover {
+    background: white;
+    color: #3b82f6;
+}
+/* --- Gap Killer & Section Style --- */
+.stripe-category-section {
+    background-color: #0f172a; /* Deep Dark Navy */
+    padding: 60px 0;
+    margin-top: -2px; /* Slider ke saath gap ko lock karne ke liye */
+    border: none;
+}
+
+.stripe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.stripe-card {
+    height: 220px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    background-image: var(--bg-img);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.4s ease;
+}
+
+/* Dark Gradient Overlay taaki text nazar aaye */
+.stripe-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 20%, rgba(15, 23, 42, 0.2));
+    transition: 0.3s;
+}
+
+.stripe-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.stripe-content h5 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stripe-content p {
+    color: #3b82f6; /* Blue highlight */
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+/* Spotlight Effect on top of Image */
+.stripe-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), 
+                rgba(255, 255, 255, 0.2) 0%, 
+                transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.stripe-card:hover {
+    transform: translateY(-8px);
+}
+
+.stripe-card:hover::after {
+    opacity: 1;
+}
+
+.stripe-card:hover .stripe-overlay {
+    background: linear-gradient(to top, rgba(59, 130, 246, 0.6) 10%, rgba(15, 23, 42, 0.1));
+}
+/* Card Container */
+.sleek-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.sleek-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+
+/* Image Section */
+.card-img-wrapper {
+    background: #fdfdfd;
+    padding: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.product-img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.sleek-card:hover .product-img {
+    transform: scale(1.1);
+}
+
+/* Badges & Buttons */
+.badge-hot {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff4757;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 50px;
+    z-index: 2;
+}
+
+.add-to-cart-btn {
+    background: #1e1e27;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background: #3b82f6;
+    transform: scale(1.1);
+}
+
+/* Typography */
+.x-small { font-size: 11px; }
+.product-title { font-size: 1.1rem; color: #2d3436; }
+.product-desc { 
+    font-size: 0.85rem; 
+    color: #636e72; 
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.new-price { color: #2d3436; }
+.card-title{
+    font-size: 2rem;
+    font-weight: 700;
+    color: red;
+}
+.search-wrapper {
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+}
+
+.search-input {
+    background: rgba(255, 255, 255, 0.05) !important; /* Translucent background */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    border-radius: 12px !important;
+    padding: 10px 20px !important;
+    transition: 0.3s ease;
+}
+
+.search-input:focus {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: #3b82f6 !important; /* Blue border on focus */
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2) !important;
+}
+
+.btn-search {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent !important;
+    border: none !important;
+    color: #3b82f6 !important; /* Icon color blue */
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.btn-search:hover {
+    color: white !important;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Placeholder ka color change karne ke liye */
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+/* Card Container */
+.sleek-card {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #eee !important;
+    overflow: hidden;
+    max-width: 280px; /* Card ki width lock kar di */
+    margin: auto;
+}
+
+/* Image ka Box */
+.card-img-wrapper {
+    background: #f8f9fa;
+    height: 180px; /* Box ki height fix */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Asli Image ki settings */
+.product-img {
+    max-height: 140px; /* Image 140px se bari nahi hogi */
+    max-width: 100%;
+    width: auto;
+    object-fit: contain; /* Image kheechegi nahi, fit rahegi */
+}
+.simple-footer {
+  background: #1a1d20; /* Dark Grey/Black background */
+  color: #adb5bd;
+  padding: 25px 0;
+  margin-top: 60px;
+  font-family: sans-serif;
+  font-size: 0.85rem;
+}
+
+.footer-icons a {
+  color: #ffffff; /* Matches your bg-info */
+  font-size: 1.2rem;
+  margin: 0 12px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.footer-icons a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.simple-footer b {
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+/* Carousel Caption ko poori height par stretch karke middle mein set karne ke liye */
+.carousel-caption.custom-cap {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay taaki text aur button zyada clear nazar aayein */
+}
+
+/* Agar aap chahte hain ki transition smooth ho aur content jhatke se center na aaye */
+.carousel-item {
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
